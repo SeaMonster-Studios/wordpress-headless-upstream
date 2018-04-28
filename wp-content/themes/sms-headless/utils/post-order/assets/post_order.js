@@ -9,7 +9,7 @@
 				order: $('#the-list').sortable('serialize'),
 			});
 		}
-	});  
+	});
 	$('table.tags #the-list').sortable({
 		'items': 'tr',
 		'axis': 'y',
@@ -20,12 +20,12 @@
 				order: $('#the-list').sortable('serialize'),
 			});
 		}
-	}); 
+	});
 	var fixHelper = function(e, ui) {
 		ui.children().children().each(function() {
 			$(this).width($(this).width());
 		});
 		return ui;
 	};
-	
-})(jQuery) 
+
+})(jQuery)

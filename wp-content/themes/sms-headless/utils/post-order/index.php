@@ -1,3 +1,3 @@
-<?php 
-//silence is golder 
+<?php
+//silence is golder
 ?>
