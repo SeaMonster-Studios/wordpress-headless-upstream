@@ -146,6 +146,27 @@ if ( ! defined( 'WP_DEBUG' ) ) {
     define('WP_DEBUG', false);
 }
 
+// START SeaMonster Studios Custom Configuration
+
+/* Increase Memory Limits */
+define( 'WP_MEMORY_LIMIT', '255M' );
+define( 'WP_MAX_MEMORY_LIMIT', '255M' );
+
+/* Require HTTPS, www. */
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  (php_sapi_name() != "cli")) {
+  if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
+      !isset($_SERVER['HTTP_X_SSL']) ||
+      $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
+
+// Stop SeaMonster Studios Custom Configuration
+
 /* That's all, stop editing! Happy Pressing. */
 
 
