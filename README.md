@@ -1,32 +1,35 @@
-# WordPress
+# SeaMonster Studios Headless Pantheon Upstream
 
-This is a WordPress repository configured to run on the [Pantheon platform](https://pantheon.io).
+## Setup
 
-Pantheon is website platform optimized and configured to run high performance sites with an amazing developer workflow. There is built-in support for features such as Varnish, Redis, Apache Solr, New Relic, Nginx, PHP-FPM, MySQL, PhantomJS and more. 
+1.  Create a new site in Pantheon with this upstream
+2.  Run the `install.sh` script (at the root directory of the repo) with the following terminal command:
 
-## Getting Started
+```
+bash install.sh -d client-domain.com
+```
 
-### 1. Spin-up a site
+This will do two things:
 
-If you do not yet have a Pantheon account, you can create one for free. Once you've verified your email address, you will be able to add sites from your dashboard. Choose "WordPress" to use this distribution.
+1.  Install all headless-related plugins
+2.  Install child theme, which is customizable per each site's needs.
 
-### 2. Load up the site
+### Running `install.sh`
 
-When the spin-up process is complete, you will be redirected to the site's dashboard. Click on the link under the site's name to access the Dev environment.
+* You can do this one of two places.
+  * A. You can clone the pantheon repo locally, run the terminal command, commit the changes, and then push back to pantheon.
+  * B. You can SSH into the pantheon server, run the command, and then commit the changes in the terminal or the pantheon dashboard.
 
-![alt](http://i.imgur.com/2wjCj9j.png?1, '')
+### But I don't want to run anything in the terminal...
 
-### 3. Run the WordPress installer
+* No problem, just do the following via SFTP:
 
-How about the WordPress database config screen? No need to worry about database connection information as that is taken care of in the background. The only step that you need to complete is the site information and the installation process will be complete.
+1.  Get plugins and child theme from the following repos:
 
-We will post more information about how this works but we recommend developers take a look at `wp-config.php` to get an understanding.
+* Plugins: https://github.com/SeaMonster-Studios/wordpress-headless-plugins
+* Child theme: https://github.com/SeaMonster-Studios/wordpress-headless-childtheme
+  * With this one, make sure you also head over to the style.css file and change the theme name to match the client.
 
-![alt](http://i.imgur.com/4EOcqYN.png, '')
+2.  Head over to the `wp-config.php` file and replace all instances of `www.yoursite.com` with the client's live URL that'll be used when going live.
 
-If you would like to keep a separate set of configuration for local development, you can use a file called `wp-config-local.php`, which is already in our .gitignore file.
-
-### 4. Enjoy!
-
-![alt](http://i.imgur.com/fzIeQBP.png, '')
-
+## Architecture
