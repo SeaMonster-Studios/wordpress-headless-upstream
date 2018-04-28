@@ -12,7 +12,7 @@
   4.  Update wp-config to use the production domain name to force HTTPS
 
 3.  Run the WP install in the WP Admin
-4.  Install all the plugins.
+4.  Install all the plugins
 
 ### Running `install.sh`
 
