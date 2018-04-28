@@ -1,0 +1,77 @@
+/* // Disable preview buttons and links */
+#preview-action,
+#wp-admin-bar-view,
+.row-actions .view,
+#slugdiv-hide,
+.welcome-view-site,
+label[for='slugdiv-hide'] {
+  display: none;
+}
+
+/* Disable Feature image (making an ACF field that makes it required) */
+#postimagediv {
+  display: none;
+}
+
+/* hide by default, remove any view links, then show with JS */
+#message {
+  display: none;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.3s ease;
+}
+
+#message.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* hide pages that are irrelevant to headless setup */
+#mc_embed_signup,
+a[href*='pluginize.com'],
+a[href*='maintainn.com'],
+a[href*='theme-editor.php'],
+.hide-if-no-customize {
+  display: none !important;
+}
+
+body.options-general-php label[for='home'],
+body.options-general-php #home {
+  display: none;
+}
+
+/* disable wysiwyg options that are used for styling */
+[aria-label='Align center'],
+[aria-label='Toolbar Toggle'],
+[aria-label='Align left'],
+[aria-label='Align right'],
+[aria-label='Insert Read More tag'] {
+  display: none !important;
+}
+
+[data-type='separator'] {
+  background-color: #f1f1f1;
+  border-left: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
+  margin-right: -1px !important;
+  margin-left: -1px !important;
+  padding: 20px 0 0 0 !important;
+  font-size: 0.75rem !important;
+}
+
+[data-type='separator'] .acf-heading {
+  padding-left: 0 !important;
+  padding-bottom: 5px !important;
+}
+
+[data-type='separator'] .acf-label {
+  display: none;
+}
+
+#acf-field-group-fields [data-type='separator'] {
+  padding-top: 0 !important;
+  border-left: none;
+  border-right: none;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
