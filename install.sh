@@ -15,7 +15,7 @@ case $opt in
 		sed -i "" "s|www.yoursite.com|$domain|" wp-config.php
 
 		# Get Seamonster Upstream Plugins
-		rm -rf ./wp-content/plugins/ && git clone git@github.com:SeaMonster-Studios/wordpress-headless-plugins.git ./wp-content/plugins/ && rm -rf ./wp-content/plugins/ && rm -rf ./wp-content/plugins/.git
+		rm -rf ./wp-content/plugins/ && git clone git@github.com:SeaMonster-Studios/wordpress-headless-plugins.git ./wp-content/plugins/ && rm -rf ./wp-content/plugins/.git
 
 		# Remove attachement to plugins repo
 		rm -rf wp-content/plugins/.git
