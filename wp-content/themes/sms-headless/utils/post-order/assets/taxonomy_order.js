@@ -33,7 +33,7 @@ jQuery( document ).ready( function( $ )
 
 	/**
 	 * Adds, shows or hides the activity status spinner
- 
+
 	 */
 	function hsam_taxonomy_sort_activity_spinner( status ) {
 		var actions_table	= $( '.tablenav .actions' );

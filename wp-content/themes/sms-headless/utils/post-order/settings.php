@@ -29,7 +29,7 @@ $order_tags = isset($order_options['tags']) ? $order_options['tags'] : array();
             <table class="form-table">
                 <tbody>
                     <tr valign="top">
-                        <th scope="row"><?php _e('Check to Sort Post Types', 'order') ?></th> 
+                        <th scope="row"><?php _e('Check to Sort Post Types', 'order') ?></th>
                         <td>
                             <label><input type="checkbox" id="order_allcheck_objects"> <?php _e('Check All', 'order') ?></label><br>
                             <?php
@@ -64,7 +64,7 @@ $order_tags = isset($order_options['tags']) ? $order_options['tags'] : array();
             <table class="form-table">
                 <tbody>
                     <tr valign="top">
-                        <th scope="row"><?php _e('Check to Sort Taxonomies', 'order') ?></th> 
+                        <th scope="row"><?php _e('Check to Sort Taxonomies', 'order') ?></th>
                         <td>
                             <label><input type="checkbox" id="order_allcheck_tags"> <?php _e('Check All', 'order') ?></label><br>
                             <?php
@@ -91,7 +91,7 @@ $order_tags = isset($order_options['tags']) ? $order_options['tags'] : array();
                 </tbody>
             </table>
 
-        </div> 
+        </div>
         <p class="submit">
             <input type="submit" class="button-primary" name="order_submit" value="<?php _e('Update', 'order'); ?>">
         </p>
