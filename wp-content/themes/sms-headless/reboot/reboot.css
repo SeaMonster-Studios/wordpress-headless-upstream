@@ -9,7 +9,8 @@ label[for='slugdiv-hide'] {
 }
 
 /* Disable Feature image (making an ACF field that makes it required) */
-#postimagediv {
+body.post-type-post #postimagediv,
+body.post-type-page #postimagediv {
   display: none;
 }
 
