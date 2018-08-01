@@ -43,7 +43,6 @@ body.options-general-php #home {
 
 /* disable wysiwyg options that are used for styling */
 [aria-label='Align center'],
-[aria-label='Toolbar Toggle'],
 [aria-label='Align left'],
 [aria-label='Align right'],
 [aria-label='Insert Read More tag'] {
