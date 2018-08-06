@@ -42,9 +42,9 @@ body.options-general-php #home {
 }
 
 /* disable wysiwyg options that are used for styling */
-[aria-label='Align center'],
+/* [aria-label='Align center'],
 [aria-label='Align left'],
-[aria-label='Align right'],
+[aria-label='Align right'], */
 [aria-label='Insert Read More tag'] {
   display: none !important;
 }
