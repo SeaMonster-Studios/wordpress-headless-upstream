@@ -1,5 +1,5 @@
 # SeaMonster Studios Headless Pantheon Upstream
-
+> DEPRECATED in favor of move to Cloudways Hosting
 ## Setup
 
 1.  Create a new site in Pantheon with this upstream
